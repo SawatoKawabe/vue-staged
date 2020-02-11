@@ -1,24 +1,12 @@
-# app
-
-## Project setup
+## 使い方
 ```
-yarn install
+git clone git@github.com:SawatoKawabe/vue-staged.git
 ```
 
-### Compiles and hot-reloads for development
 ```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
+cd ./vue-staged
+docker-compose build
+docker-compose up
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+localhost:8080でみれるよ:]
