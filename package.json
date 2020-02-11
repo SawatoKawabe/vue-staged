@@ -36,7 +36,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "docker-compose run --rm app yarn eslint"
+      "pre-commit": "lint-staged -r"
     }
   },
   "lint-staged": {
