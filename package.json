@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "eslint": "eslint --fix"
   },
   "dependencies": {
     "core-js": "^3.6.4",
@@ -35,12 +36,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "docker-compose run --rm app yarn eslint"
     }
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
+    "*.{vue,js}": [
+      "docker-compose run --rm app yarn eslint",
       "git add"
     ]
   }
